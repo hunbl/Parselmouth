@@ -29,9 +29,7 @@
 #include <string.h>
 #include <sys/stat.h>
 #include <time.h>
-#ifndef _MSC_VER
-	#include <unistd.h>
-#endif
+#include <unistd.h>
 
 #include "espeak_ng.h"
 #include "speak_lib.h"

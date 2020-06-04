@@ -22,9 +22,6 @@
 
 #include "config.h"
 
-#ifdef _MSC_VER
-#define _USE_MATH_DEFINES
-#endif
 #include <math.h>
 //#include <stdbool.h>
 #include <stdint.h>

@@ -30,9 +30,7 @@
 #include <string.h>
 #include <sys/stat.h>
 #include <time.h>
-#ifndef _MSC_VER
 #include <unistd.h>
-#endif
 #include <wchar.h>
 
 #ifdef HAVE_PCAUDIOLIB_AUDIO_H
@@ -316,7 +314,7 @@ ESPEAK_NG_API void espeak_ng_InitializePath(const char *path)
 	var_type = REG_SZ;
 	RegQueryValueExA(RegKey, "Path", 0, &var_type, buf, &size);
 
-	if (check_data_path(reinterpret_cast<char*>(buf), 1))
+	if (check_data_path(buf, 1))
 		return;
 #elif !defined(PLATFORM_DOS)
 	if (check_data_path(getenv("ESPEAK_DATA_PATH"), 1))
